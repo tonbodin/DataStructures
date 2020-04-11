@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
@@ -71,7 +72,7 @@ public class Main {
 		System.out.println(pr.toString());
 		System.out.println(pr.poll());
 		*/
-		
+		/*
 		PQueue<String> pq = new PQueue(4);
 		
 		pq.add("Hello");
@@ -80,6 +81,29 @@ public class Main {
 		pq.add("Nice");
 		
 		System.out.println(pq.toString());
+		*/
+		
+		
+		//Implementation of Union Find using a HashMap
+		
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		
+		
+		//adding arbitrary values to the hashmap
+		hm.put(0, "A");
+		hm.put(1, "C");
+		hm.put(2, "D");
+		hm.put(3, "F");
+		hm.put(4, "B");
+		hm.put(5, "E");
+		
+		UnionFind uf = new UnionFind(6);
+		
+		System.out.println(hm.get(uf.find(0)));
+		uf.unify(2, 3);
+		System.out.println(hm.get(uf.find(2)));
+		System.out.println(hm.get(uf.find(3)));
+		
 		
 		
 		
