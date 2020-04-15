@@ -81,7 +81,7 @@ public class Main {
 		pq.add("Nice");
 		
 		System.out.println(pq.toString());
-		*/
+		
 		
 		
 		//Implementation of Union Find using a HashMap
@@ -103,6 +103,17 @@ public class Main {
 		uf.unify(2, 3);
 		System.out.println(hm.get(uf.find(2)));
 		System.out.println(hm.get(uf.find(3)));
+		
+		*/
+		//Binary Search Tree Test
+		BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
+		System.out.println(bst.add(1));
+		System.out.println(bst.add(-1));
+		System.out.println(bst.add(0));
+		System.out.println(bst.add(2));
+		System.out.println(bst.add(3));
+		System.out.println(bst.remove(2));
+		System.out.println(bst.size());
 		
 		
 		
