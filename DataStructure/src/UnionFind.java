@@ -2,6 +2,8 @@
 //UnionFind groups elements into disjointed groups. Each element points towards one node, and in the 
 //beginning, points to itself.
 
+//We only keep track of the indexes of our array, not the actual elements themselves.
+
 public class UnionFind {
 	
 	//the number of elements in the union find 
@@ -62,6 +64,7 @@ public class UnionFind {
 	public boolean connected(int p, int q) {
 		return find(p) == find(q);
 	}
+	
 	
 	public int componentSize(int p) {
 		return sz[find(p)];

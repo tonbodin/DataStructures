@@ -1,5 +1,8 @@
 import java.util.LinkedList;
 
+
+//First In, Last out
+
 public class Queue<T> {
 	private LinkedList<T> list = new LinkedList();
 	private T head;

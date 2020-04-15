@@ -90,6 +90,9 @@ public class BinarySearchTree <T extends Comparable<T>> {
 				node.data = null;
 				node = null;
 				return leftChild;
+				
+				
+				
 				//the successor can either be the largest value in the left subtree or the smallest value in the right subtree
 				//in this case, we are finding the smallest element in the right subtree
 			} else {

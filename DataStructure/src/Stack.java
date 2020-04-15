@@ -1,5 +1,7 @@
 import java.util.LinkedList;
 
+//First In, Last Out
+
 public class Stack<T> {
 	
 	private LinkedList<T> list = new LinkedList();

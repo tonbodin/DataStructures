@@ -1,5 +1,7 @@
 import java.util.*;
 
+//Create a tree that is in order by size going left to right, row by row
+
 public class PQueue <T extends Comparable<T>> { 	
 	
 	//the number of elements currently inside the heap
