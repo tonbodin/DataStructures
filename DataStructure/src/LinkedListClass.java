@@ -1,5 +1,6 @@
+import java.util.Iterator;
 
-public class LinkedList <T> {
+public class LinkedListClass <T> implements Iterable<T> {
 	
 	 private int size = 0;
 	 private Node<T> head = null;
@@ -159,6 +160,24 @@ public class LinkedList <T> {
 		 
 		 
 	 }
+
+
+
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	public void clear() {
+		
+		while(this.head != null) {
+			this.remove(0);
+		}
+		
+	}
 	 
 
 	

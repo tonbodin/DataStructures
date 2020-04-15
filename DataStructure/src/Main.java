@@ -32,10 +32,10 @@ public class Main {
 		}
 		
 		System.out.println(sym && st.isEmpty());
-		*/
 		
-		/*
-		 * LinkedList<Integer> list = new LinkedList();
+		
+		
+		LinkedListClass<Integer> list = new LinkedListClass();
 		System.out.println("Added: " + list.addLast(2));
 		System.out.println("List: " + list.toString());
 		System.out.println("List Size " + list.size());
@@ -54,7 +54,7 @@ public class Main {
 		System.out.println("Removed: " + list.remove(0));
 		System.out.println("List Size " + list.size());
 		System.out.println("List: " + list.toString());
-		 */
+		
 		
 		/*
 		PriorityQueue<Integer> pr = new PriorityQueue();
@@ -104,7 +104,7 @@ public class Main {
 		System.out.println(hm.get(uf.find(2)));
 		System.out.println(hm.get(uf.find(3)));
 		
-		*/
+		
 		//Binary Search Tree Test
 		BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
 		System.out.println(bst.add(1));
@@ -112,10 +112,20 @@ public class Main {
 		System.out.println(bst.add(0));
 		System.out.println(bst.add(2));
 		System.out.println(bst.add(3));
-		System.out.println(bst.remove(2));
+		System.out.println(bst.remove(2)); 
 		System.out.println(bst.size());
 		
+		*/
 		
+		
+		//Separate Chaining Test
+		HashTableSeparateChaining<Integer, String> ht = new HashTableSeparateChaining<>();
+		ht.add(2, "Hello");
+		ht.add(3, "Now");
+		ht.add(4, "LOL");
+		ht.add(8, "Yee");
+		ht.remove(8);
+		System.out.println(ht.toString());
 		
 		
 	}
