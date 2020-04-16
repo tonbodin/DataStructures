@@ -97,6 +97,7 @@ public class PQueue <T extends Comparable<T>> {
 			heapCapacity++;
 		}
 		
+		//Add the element to the map as well
 		mapAdd(elem, heapSize);
 		
 		swim(heapSize);
@@ -110,6 +111,7 @@ public class PQueue <T extends Comparable<T>> {
 		return node1.compareTo(node2) <= 0;
 	}
 	
+	//move the element up the tree
 	private void swim(int k) {
 		
 		int parent = (k-1)/2;
@@ -123,6 +125,7 @@ public class PQueue <T extends Comparable<T>> {
 		
 	}
 	
+	//move the element down the tree
 	private void sink(int k) {
 		
 		while(true) {
@@ -156,6 +159,7 @@ public class PQueue <T extends Comparable<T>> {
 		mapSwap(elem1, elem2, i, j);
 	}
 	
+	
 	public boolean remove(T element) {
 		if(element == null) {return false;}
 		
@@ -164,6 +168,7 @@ public class PQueue <T extends Comparable<T>> {
 		return index != null;
 	}
 	
+	//removing an element in the tree using the index
 	private T removeAt(int i) {
 		if(isEmpty()) {return null;}
 		
@@ -205,6 +210,7 @@ public class PQueue <T extends Comparable<T>> {
 		return isMinHeap(left) && isMinHeap(right);
 	}
 	
+	//adding an index to the map.
 	private void mapAdd(T value, int index) {
 		TreeSet<Integer> set = map.get(value);
 		
@@ -215,18 +221,21 @@ public class PQueue <T extends Comparable<T>> {
 		} else set.add(index);
 	}
 	
+	//removing index of value from index tree map
 	private void mapRemove(T value, int index) {
 		TreeSet<Integer> set = map.get(value);
 		set.remove(index);
 		if(set.size() == 0) map.remove(value);
 	}
 	
+	//getting the last index of a value from the map
 	private Integer mapGet(T value) {
 		TreeSet<Integer> set = map.get(value);
 		if(set != null) return set.last();
 		return null;
 	}
 	
+	//swapping elements in the map
 	private void mapSwap(T val1, T val2, int val1index, int val2index) {
 		TreeSet<Integer> set1 = map.get(val1);
 		TreeSet<Integer> set2 = map.get(val2);
