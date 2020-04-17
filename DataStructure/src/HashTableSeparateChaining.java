@@ -226,18 +226,18 @@ public class HashTableSeparateChaining<K,V> implements Iterable<K> {
 	}
 	
 	//Returns the list of keys found within the Hash Table
-		public List<V> values() {
-			List<V> values = new ArrayList<>(size());
+	public List<V> values() {
+		List<V> values = new ArrayList<>(size());
 			
-			for(LinkedList<Entry<K,V>> bucket : table) {
-				if(bucket != null) {
-					for(Entry<K,V> entry: bucket) {
-						values.add(entry.value);
-					}
+		for(LinkedList<Entry<K,V>> bucket : table) {
+			if(bucket != null) {
+				for(Entry<K,V> entry: bucket) {
+					values.add(entry.value);
 				}
 			}
-			return values;
 		}
+		return values;
+	}
 
 	@Override
 	public Iterator<K> iterator() {

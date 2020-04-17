@@ -117,6 +117,7 @@ public class Main {
 		
 		*/
 		
+		/*
 		
 		//Separate Chaining Test
 		HashTableSeparateChaining<Integer, String> ht = new HashTableSeparateChaining<>();
@@ -126,6 +127,17 @@ public class Main {
 		ht.add(8, "Yee");
 		ht.remove(8);
 		System.out.println(ht.toString());
+		*/
+		
+		//hash table quadratic probing test
+		HashTableQuadraticProbing<Integer, String> qp = new HashTableQuadraticProbing<>();
+		qp.add(2, "Hello");
+		qp.add(3, "Now");
+		qp.add(4, "LOL");
+		qp.add(8, "Yee");
+		qp.remove(8);
+		
+		System.out.println(qp.toString());
 		
 		
 	}
