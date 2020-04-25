@@ -128,7 +128,7 @@ public class Main {
 		ht.remove(8);
 		System.out.println(ht.toString());
 		*/
-		
+		/*
 		//hash table quadratic probing test
 		HashTableQuadraticProbing<Integer, String> qp = new HashTableQuadraticProbing<>();
 		qp.add(2, "Hello");
@@ -138,8 +138,15 @@ public class Main {
 		qp.remove(8);
 		
 		System.out.println(qp.toString());
+		*/
 		
+		//Testing Fenwick Tree
+		int[] arr = new int[] {3,2,-1, 6, 5, 4, -3,3, 7,2,3};
+		FenwickTree ft = new FenwickTree(arr);
 		
+		System.out.println(ft.toString());
+		ft.set(6, 2);
+		System.out.println(ft.toString());
 	}
 	
 	public static boolean isLeftBracket(String bracket) {
