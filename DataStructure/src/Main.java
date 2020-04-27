@@ -141,12 +141,26 @@ public class Main {
 		*/
 		
 		//Testing Fenwick Tree
+		/*
 		int[] arr = new int[] {3,2,-1, 6, 5, 4, -3,3, 7,2,3};
 		FenwickTree ft = new FenwickTree(arr);
 		
 		System.out.println(ft.toString());
 		ft.set(6, 2);
 		System.out.println(ft.toString());
+		*/
+		/*
+		AVLTreeRecursive<Integer> avl = new AVLTreeRecursive<Integer>();
+		avl.insert(2);
+		avl.insert(3);
+		avl.insert(1);
+		avl.insert(0);
+		avl.insert(-1);
+		
+		System.out.println(avl.height());
+		*/
+		
+		
 	}
 	
 	public static boolean isLeftBracket(String bracket) {
